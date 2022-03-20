@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>eValuer</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/static/images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/fonts/iconic/css/material-design-iconic-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/noui/nouislider.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/util.css">
+	<!--===============================================================================================-->
+</head>
+
+<body>
+	<div class="page-wrapper bg-red">
+		<div class="wrapper wrapper--w960">
+			<div class="card card-2">
+				<div class="card-heading"></div>
+				<form class="contact100-form validate-form" action="{{ url_for('predict')}}" method="post">
+					<span class="contact100-form-title">
+						eValuer
+					</span>
+					<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Year!!!">
+						<span class="label-input100">Year </span>
+						<input class="input100" type="number" id="first" name="Year"
+							placeholder="Year in which car was bought?">
+					</div>
+
+					<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Kilometers Driven!!!">
+						<span class="label-input100">Kilometers Driven </span>
+						<input class="input100" type="number" id="third" name="Kms_Driven"
+							placeholder="Kilometers Driven Till Date! ">
+					</div>
+
+					<div class="wrap-input100 input100-select bg1">
+						<span class="label-input100">Brand </span>
+						<div>
+							<select class="js-select2" id="brand" name="brand">
+								<option>Please chooses</option>
+								<option value="BMW">BMW</option>
+								<option value="Chevrolet">Chevrolet</option>
+								<option value="Dastun">Dastun</option>
+								<option value="Fiat">Fiat</option>
+								<option value="Force">Force</option>
+								<option value="Ford">Ford</option>
+								<option value="Honda">Honda</option>
+								<option value="Hyundai">Hyundai</option>
+								<option value="ISUZU">ISUZU</option>
+								<option value="Isuzu">Isuzu</option>
+								<option value="Jaguar">Jaguar</option>
+								<option value="Jeep">Jeep</option>
+								<option value="Lamborghini">Lamborghini</option>
+								<option value="Land Rover">Land Rover</option>
+								<option value="Mahindra">Mahindra</option>
+								<option value="Maruti Suzuki">Maruti Suzuki</option>
+								<option value="Mercedes Benz">Mercedes Benz</option>
+								<option value="Mini Cooper">Mini Cooper</option>
+								<option value="Mitsubishi">Mitsubishi</option>
+								<option value="Nissan">Nissan</option>
+								<option value="Porsche">Porsche</option>
+								<option value="Renault">Renault</option>
+								<option value="Skoda">Skoda</option>
+								<option value="Tata">Tata</option>
+								<option value="Toyota">Toyota</option>
+								<option value="Volkswagen">Volkswagen</option>
+								<option value="Volvo">Volvo</option>
+								<option value="Bentley">Bentley</option>
+								<option value="Audi">Audi</option>
+								<option value="Kia">Kia</option>
+								<option value="MG">MG</option>
+							</select>
+							<div class="dropDownSelect2"></div>
+						</div>
+					</div>
+
+					<div class="wrap-input100 dis-none js-show-service">
+						<span class="contact100-form-text">Enter the below mentioned cars speification to continue</span>
+						<div class="contact100-form bg1">
+
+							<div class="wrap-input100 validate-input bg1 rs1-wrap-input100 form-check form-check-inline " data-validate="Engines CC Value!!!">
+								<span class="label-input100">Engine (in CC)</span>
+								<input class="input100" type="number" id="Engine" name="Engine"
+									placeholder="Engine's Cubic Capacity">
+							</div>
+
+							<div class="wrap-input100 validate-input bg1 rs1-wrap-input100 form-check form-check-inline" data-validate="The HorsePower!!!">
+								<span class="label-input100">Power (in bhp)</span>
+								<input class="input100" type="number" id="Power" name="Power" 
+									placeholder="HorsePower Value of Car">
+							</div>
+
+							<div class="wrap-input100 validate-input bg1 rs1-wrap-input100 form-check form-check-inline" data-validate="The Mileage!!!">
+								<span class="label-input100">Mileage (in MK/KG)</span>
+								<input class="input100" type="number" id="Mileage" name="Mileage" 
+									placeholder="Enter Car's Mileage">
+							</div>
+
+							<div class="wrap-input100 validate-input bg1 rs1-wrap-input100 form-check form-check-inline"
+							data-validate="Please enter no. of Seats!!!">
+								<span class="label-input100">Seats</span>
+								<input class="input100" type="number" id="Seats" name="Seats" 
+									placeholder="Enter No. of Seats in Car">
+							</div>
+						</div>
+					</div>
+					<div class="wrap-input100 bg1 rs1-wrap-input100">
+						<label class="label-input100">Transmission Type</label>
+						<div class="input100 p-t-15">
+							<label class="radio-container input100 m-r-55">
+								<input type="radio" checked="checked" value="Mannual" name="Transmission_Mannual">
+								<span class="checkmark">Mannual</span>
+							</label>
+							<label class="radio-container">
+								<input type="radio" value="Automatic" name="Transmission_Mannual">
+								<span class="checkmark">Automatic</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="wrap-input100 rs1-wrap-input100 bg1">
+						<span class="label-input100">Previous No. of Owners</span>
+						<div>
+							<select class="js-select6" name="Owner" id="Owner">
+								<option>Please chooses</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3 or more</option>
+							</select>
+							<div class="dropDownSelect2"></div>
+						</div>
+					</div>
+
+					<div class="wrap-input100 bg1 validate-input" data-validate="Enter Price">
+						<span class="label-input100">Price (in Lakh ₹)</span>
+						<input class="input100" type="number" name="Present_Price" id="second"
+							placeholder="Enter the Current Price of car in Showroom!!">
+					</div>
+					<div class="wrap-input100 bg1">
+						<label class="label-input100">Select the Fuel Type</label>
+						<div class="input100 p-t-15">
+							<div class="form-check form-check-inline m-l-20">
+								<label class="radio-container m-r-100 m-l-50 hov-pointer">
+									<input class="form-check-input" checked="checked" type="radio"
+										name="Fuel_Type_Petrol" id="fuel" value="Diseal">
+									<span class="checkmark">Diseal</span>
+								</label>
+							</div>
+							<div class="form-check form-check-inline m-r-100">
+								<label class="radio-container hov-pointer">
+									<input class="form-check-input hov-pointer" type="radio" name="Fuel_Type_Petrol"
+										id="fuel" value="Petrol">
+									<span class="checkmark">Petrol</span>
+								</label>
+							</div>
+							<div class="form-check form-check-inline m-r-100">
+								<label class="radio-container hov-pointer">
+									<input class="form-check-input hov-pointer" type="radio" name="Fuel_Type_Petrol"
+										id="fuel" value="CNG/LPG">
+									<span class="checkmark">CNG/LPG</span>
+								</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<label class="radio-container hov-pointer">
+									<input class="form-check-input hov-pointer" type="radio" name="Fuel_Type_Petrol"
+										id="fuel" value="Electric">
+									<span class="checkmark">Electric</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="input100 bg1 rs1-wrap-input100" btn>
+						<button class="contact100-form-btn" id="sub" type="submit">
+							<span>
+								Submit
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+			</div>
+			</form>
+		</div>
+	</div>
+	</div>
+	</div>
+
+
+	<!--===============================================================================================-->
+	<script src="/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/static/vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/static/vendor/bootstrap/js/popper.js"></script>
+	<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/static/vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select6").each(function () {
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+		$(".js-select2").each(function () {
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+
+
+			$(".js-select2").each(function () {
+				$(this).on('select2:close', function (e) {
+					if ($(this).val() == "Please chooses") {
+						$('.js-show-service').slideUp();
+					}
+					else {
+						$('.js-show-service').slideUp();
+						$('.js-show-service').slideDown();
+					}
+				});
+			});
+		})
+	</script>
+	<!--===============================================================================================-->
+	<script src="/static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/static/vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="/static/vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script src="/static/vendor/noui/nouislider.min.js"></script>
+	<script>
+		var rangeslider = document.getElementById("sliderRange");
+		var output = document.getElementById("demo");
+		output.innerHTML = rangeslider.value;
+	</script>
+	<!--===============================================================================================-->
+	<script src="/static/js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-23581568-13');
+	</script>
+
+</body>
+
+</html>
