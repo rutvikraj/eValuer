@@ -3,17 +3,17 @@ import requests
 import pickle
 import numpy as np
 
-app = Flask(__name__)
+app_main = Flask(__name__)
 
 model = pickle.load(open('xgb.pkl', 'rb'))
 
 
-@app.route('/', methods=['GET'])
+@app_main.route('/', methods=['GET'])
 def Home():
     return render_template('index.html')
 
 
-@app.route("/predict", methods=['POST'])
+@app_main.route("/predict", methods=['POST'])
 def predict():
     Year_buy = int(request.form['Year'])
     Present_Price = int(request.form['Present_Price'])
@@ -50,4 +50,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app_main.run(debug=True)
