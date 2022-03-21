@@ -5,7 +5,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = pickle.load(open('xgb.pkl', 'rb'))
+model = pickle.load(open('model/xgb.pkl', 'rb'))
 
 
 @app.route('/', methods=['GET'])
