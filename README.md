@@ -1,0 +1,20 @@
+# eValuer
+An Automated Car Price Prediction System using an Effective Machine Learning Techniques based on the second hand car fetures.
+
+## Running the Application
+#### Web App.
+- [Heartify](https://valuer-app.herokuapp.com/)
+
+#### Locally
+- Install requirements (On Terminal) 
+   `pip install -r requirements.txt`
+- Run flask app (On Terminal)
+    `python app.py`
+    CTRL + Click on the link on Terminal to open the app in browser.
+      <p align="center">
+      <img src="https://github.com/" width="525" height="200" />
+      </p>
+
+## Models used and accuracy
+- Model -> XGBoost.
+- Accuracy -> 92.6%.
