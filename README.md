@@ -10,7 +10,7 @@ An Automated Car Price Prediction System using an Effective Machine Learning Tec
    `pip install -r requirements.txt`
 - Run flask app (On Terminal)
     `python app.py`
-    - CTRL + Click on the link(http://127.0.0.1:5000/) on Terminal to open the app in browser.
+    - "CTRL + Click" on the 'http://127.0.0.1:5000/' on Terminal to open the app in browser.
          <p align="center">
          <img src="https://github.com/rutvikraj/eValuer/blob/main/static/images/img-01.png"/>
          </p>
