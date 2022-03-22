@@ -12,7 +12,7 @@ An Automated Car Price Prediction System using an Effective Machine Learning Tec
     `python app.py`
     CTRL + Click on the link on Terminal to open the app in browser.
       <p align="center">
-      <img src="https://github.com/" width="525" height="200" />
+      <img src="https://github.com/rutvikraj/eValuer/blob/main/static/images/img-01.png" width="525" height="200" />
       </p>
 
 ## Models used and accuracy
