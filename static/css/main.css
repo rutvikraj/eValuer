@@ -1,9 +1,30 @@
 
-/* ==========================================================================
-   #FONT
-   ========================================================================== */
-   .font-robo {
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+  /*//////////////////////////////////////////////////////////////////
+  [ FONT ]*/
+  
+  @font-face {
+    font-family: Montserrat-Regular;
+    src: url('../fonts/montserrat/Montserrat-Regular.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Montserrat-Bold;
+    src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Montserrat-Black;
+    src: url('../fonts/montserrat/Montserrat-Black.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Montserrat-SemiBold;
+    src: url('../fonts/montserrat/Montserrat-SemiBold.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Montserrat-Medium;
+    src: url('../fonts/montserrat/Montserrat-Medium.ttf'); 
   }
   
   /* ==========================================================================
@@ -18,6 +39,9 @@
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+  p{
+    font-family: Montserrat-Regular;
   }
   
   .row-space {
@@ -72,7 +96,7 @@
    */
   body,
   h1, h2, h3, h4, h5, h6,
-  blockquote, p, pre,
+  blockquote, p,
   dl, dd, ol, ul,
   figure,
   hr,
@@ -87,6 +111,9 @@
   li > ol,
   li > ul {
     margin-bottom: 0;
+  }
+  pre{
+    font-family: Montserrat-Medium;
   }
   
   /**
@@ -121,7 +148,8 @@
   }
   
   body {
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family: Montserrat-Regular;
+    src: url('../fonts/montserrat/Montserrat-Regular.ttf');
     font-weight: 400;
     font-size: 14px;
   }
@@ -238,34 +266,7 @@ background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+
   .btn--green:hover {
     background: #4dae3c;
   }
-  
-  /*//////////////////////////////////////////////////////////////////
-  [ FONT ]*/
-  
-  @font-face {
-    font-family: Montserrat-Regular;
-    src: url('../fonts/montserrat/Montserrat-Regular.ttf'); 
-  }
-  
-  @font-face {
-    font-family: Montserrat-Bold;
-    src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
-  }
-  
-  @font-face {
-    font-family: Montserrat-Black;
-    src: url('../fonts/montserrat/Montserrat-Black.ttf'); 
-  }
-  
-  @font-face {
-    font-family: Montserrat-SemiBold;
-    src: url('../fonts/montserrat/Montserrat-SemiBold.ttf'); 
-  }
-  
-  @font-face {
-    font-family: Montserrat-Medium;
-    src: url('../fonts/montserrat/Montserrat-Medium.ttf'); 
-  }
+
   
   /* ==========================================================================
      #CARD
@@ -407,11 +408,8 @@ background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+
   }
   
   p {
-    font-family: Poppins-Regular;
-    font-size: 14px;
-    line-height: 1.7;
-    color: #666666;
-    margin: 0px;
+    font-family: Montserrat-Medium;
+    padding: 0px;
   }
   
   ul, li {
