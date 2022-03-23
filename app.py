@@ -46,7 +46,7 @@ def predict():
     if output < 0:
         return render_template('result.html', prediction_texts="Sorry you cannot sell this car", Price=Present_Price, Year=Year_buy, Kms_Driven=Kms_Driven, brand=brand, Engine=Engine, Power=Power, Mileage=Mileage, Seats=Seats, Transmission=Transmission, Owners=Owner, Fuel_type=Fuel_Type)
     else:
-        return render_template('result.html', prediction_text="You Can Sell The Car at {}".format(output), Price=Present_Price, Year=Year_buy, Kms_Driven=Kms_Driven, brand=brand, Engine=Engine, Power=Power, Mileage=Mileage, Seats=Seats, Transmission=Transmission, Owners=Owner, Fuel_type=Fuel_Type)
+        return render_template('result.html', prediction_text="{}".format(output), Price=Present_Price, Year=Year_buy, Kms_Driven=Kms_Driven, brand=brand, Engine=Engine, Power=Power, Mileage=Mileage, Seats=Seats, Transmission=Transmission, Owners=Owner, Fuel_type=Fuel_Type)
 
 
 if __name__ == "__main__":
