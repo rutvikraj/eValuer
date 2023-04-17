@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request
+from flask_frozen import Freezer
 import requests
 import pickle
 import numpy as np
 
 app = Flask(__name__)
-
+freezer = Freezer(app)
 model = pickle.load(open('model/xgb.pkl', 'rb'))
 
 
@@ -51,3 +52,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    freezer.freeze()
